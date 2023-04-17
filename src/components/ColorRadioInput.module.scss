@@ -1,0 +1,34 @@
+.colorRadio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+
+  label {
+    position: relative;
+  }
+
+  span {
+    display: block;
+    background: var(--fill-color);
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+  }
+
+  input:checked ~ span {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  input:focus ~ span {
+    outline: 1px solid #000;
+  }
+}
